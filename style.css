@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Shadows+Into+Light&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 
 body {
     background: #033a56;
 }
 
 .game-title {
-    color: white;
+    color: #ffeedf;
     text-align: center;
-    font-family: "Cinzel Decorative", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 70px;
+    font-weight: bold;
 }
 
 .game-description {
-    color: white;
+    color: #ffeedf;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -37,7 +37,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 40px;
-    font-family: "Cinzel", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 20px;
     border: 2px dashed black;
 
@@ -45,8 +45,8 @@ body {
 }
 
 footer {
-    color: white;
-    font-family: "Cinzel Decorative", sans-serif;
+    color: #ffeedf;
+    font-family: "Raleway", sans-serif;
     text-align: center;
     padding: 40px;
 }
@@ -56,14 +56,15 @@ a {
 }
 
 h1 {
-    color: white;
+    color: #ffeedf;
     text-align: center;
-    font-family: "Cinzel Decorative", sans-serif;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
     font-size: 40px;
 }
 
 h4 {
-    color: white;
+    color: #ffeedf;
     text-align: center;
     display: flex;
     justify-content: center;
