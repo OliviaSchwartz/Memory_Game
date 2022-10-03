@@ -8,82 +8,94 @@
     <link rel="stylesheet" href="style.css" />
     <title>Memory Game Easy Mode </title>
 </head>
+
+<header>
+    <h1>Memory Game Easy Mode</h1>
+    <div class="instructions">
+       <h4><em>To win this memory game game,  you will need to match each picture with its pair. <br> Goodluck! </em></h4>
+       </div>
+</header>
+
 <body>
-    <section class="game-info">
-        <h1>Memory Game Easy Mode</h1>
-     <div class="instructions">
-        <h4><em>To win this memory game game,  you will need to match each picture with its pair. <br> Goodluck! </em></h4>
+    <section class= "game-play">
+
+    <div class="button-container">
+        <button class="Start Over">Start Over</button>
+        <a href="gameplay2.html"><button class="try-hard-button"> Try Hard Mode</button></a>
+        <a href="index.html"><button class="go-home">Go Back To Main Page</button></a>
+    </div>
+
+
+    <section class="game-board1">
+        <div class="playing-area">
+            <div class="card">
+                <img class="front" id="card-one" src="Images Used/Card Fronts.svg">
+                 <img class="back"   id="card-one" src="Images Used/Picture for Card One and Two.svg">
+             </div>
+
+            <div class="card">
+                <img class="front" id="card-two" src="Images Used/Card Fronts.svg">
+                <img class="back"   id="card-two" src="Images Used/Picture for Card One and Two.svg">
+            </div>
+
+            <div class="card">
+                <img class="front" id="card-three" src="Images Used/Card Fronts.svg">
+                <img class="back" id="card-three" src="Images Used/Picture for Card Three and Four.svg">
+            </div>
+
+            <div class="card">
+                 <img class="front" id="card-four" src="Images Used/Card Fronts.svg">
+                <img class="back" id="card-four" src="Images Used/Picture for Card Three and Four.svg">
+            </div>
+
+            <div class="card">
+                <img class="front" id="card-five" src="Images Used/Card Fronts.svg">
+                 <img class="back"  id="card-five" src="Images Used/Picture for Card Five and Six.svg">
+            </div>
+
+             <div class="card">
+                <img class="front" id="card-six" src="Images Used/Card Fronts.svg">
+                 <img class="back"  id="card-six" src="Images Used/Picture for Card Five and Six.svg">
+            </div>
+
+             <div class="card">
+                 <img class="front" id="card-seven" src="Images Used/Card Fronts.svg">
+                <img class="back"  id="card-seven" src="Images Used/Picture for Card Seven and Eight.svg">
+             </div>
+
+            <div class="card">
+                <img class="front" id="card-eight" src="Images Used/Card Fronts.svg">
+                <img class="back"  id="card-eight" src="Images Used/Picture for Card Seven and Eight.svg">
+             </div>
+
+             <div class="card">
+                <img class="front" id="card-nine" src="Images Used/Card Fronts.svg">
+                 <img class="back"  id="card-nine" src="Images Used/Picture for Card Nine and Ten.svg">
+             </div>
+
+            <div class="card">
+                 <img class="front" id="card-ten" src="Images Used/Card Fronts.svg">
+                <img class="back"  id="card-ten" src="Images Used/Picture for Card Nine and Ten.svg">
+            </div>
+
+            <div class="card">
+                <img class="front" id="card-eleven" src="Images Used/Card Fronts.svg">
+                <img class="back"  id="card-eleven" src="Images Used/Picture for Card Eleven and Twelve.svg">
+            </div>
+
+             <div class="card">
+                <img class="front" id="card-eleven" src="Images Used/Card Fronts.svg">
+                <img class="back"  id="card-eleven" src="Images Used/Picture for Card Eleven and Twelve.svg">
+            </div>
         </div>
     </section>
 
-    <section class="game-board">
-        <div class="card">
-            <img class="front" id="card-one" src="Images Used/Card Fronts.svg">
-            <img class="back"   id="card-one" src="Images Used/Picture for Card One and Two.svg">
-           </div>
+    <div class="scoreboard">
+        <h5 class="score">Games Won</h5>
+        <h5>0</h5>
+    </div>
 
-        <div class="card">
-            <img class="front" id="card-two" src="Images Used/Card Fronts.svg">
-            <img class="back"   id="card-two" src="Images Used/Picture for Card One and Two.svg">
-        </div>
-
-        <div class="card">
-            <img class="front" id="card-three" src="Images Used/Card Fronts.svg">
-            <img class="back" id="card-three" src="Images Used/Picture for Card Three and Four.svg">
-        </div>
-
-        <div class="card">
-            <img class="front" id="card-four" src="Images Used/Card Fronts.svg">
-            <img class="back" id="card-four" src="Images Used/Picture for Card Three and Four.svg">
-        </div>
-
-        <div class="card">
-            <img class="front" id="card-five" src="Images Used/Card Fronts.svg">
-            <img class="back"  id="card-five" src="Images Used/Picture for Card Five and Six.svg">
-        </div>
-
-        <div class="card">
-            <img class="front" id="card-six" src="Images Used/Card Fronts.svg">
-            <img class="back"  id="card-six" src="Images Used/Picture for Card Five and Six.svg">
-        </div>
-
-        <div class="card">
-            <img class="front" id="card-seven" src="Images Used/Card Fronts.svg">
-            <img class="back"  id="card-seven" src="Images Used/Picture for Card Seven and Eight.svg">
-        </div>
-
-        <div class="card">
-            <img class="front" id="card-eight" src="Images Used/Card Fronts.svg">
-            <img class="back"  id="card-eight" src="Images Used/Picture for Card Seven and Eight.svg">
-        </div>
-
-        <div class="card">
-            <img class="front" id="card-nine" src="Images Used/Card Fronts.svg">
-            <img class="back"  id="card-nine" src="Images Used/Picture for Card Nine and Ten.svg">
-        </div>
-
-        <div class="card">
-            <img class="front" id="card-ten" src="Images Used/Card Fronts.svg">
-            <img class="back"  id="card-nine" src="Images Used/Picture for Card Nine and Ten.svg">
-        </div>
-
-        <div class="card">
-            <img class="front" id="card-eleven" src="Images Used/Card Fronts.svg">
-            <img class="back" id="card-eleven" src="Images Used/Picture for Card Eleven and Twelve.svg">
-        </div>
-
-        <div class="card">
-            <img class="front" id="card-twelve" src="Images Used/Card Fronts.svg">
-            <img class="back" id="card-twelve" src="Images Used/Picture for Card Eleven and Twelve.svg">
-        </div>
 
     </section>
-
-
 </body>
-<footer class="button-container">
-    <button class="Start Over">Start Over</button>
-    <a href="gameplay2.html"><button class="try-hard-button"> Try Hard Mode</button></a>
-    <a href="index.html"><button class="go-home">Go Back To Main Page</button></a>
-</footer>
 </html>

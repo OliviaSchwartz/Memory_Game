@@ -2,6 +2,11 @@
 
 body {
     background: #033a56;
+
+}
+.game-play {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .game-title {
@@ -20,6 +25,11 @@ body {
     align-items: center;
     margin: 0 70px 0 70px;
     padding: 0 50px 0 50px;
+}
+
+.game-play {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .start-buttons {
@@ -71,4 +81,67 @@ h4 {
     align-items: center;
     margin: 0 70px 0 70px;
     padding: 0 50px 0 50px;
+}
+
+
+.front {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+
+}
+
+.back {
+    z-index: 1;
+    margin-top: 0px;
+    width: 150px;
+    height: 150px;
+}
+
+.playing-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    text-align: center;
+    margin: 50px;
+}
+
+.game-play {
+    height: 300px;
+    margin: 10px 50px 10px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    text-align: center;
+
+}
+
+.scoreboard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: right;
+    color: #ffeedf;
+    font-family:"Raleway", sans-serif;
+    font-size: 40px;
+}
+.score{
+    text-decoration: underline;
+    font-weight:400;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: right;
+}
+
+button {
+    padding:10px;
+    margin: 15px;
 }
