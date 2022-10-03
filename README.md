@@ -10,7 +10,7 @@
 
 ### **_Description_**
 
-#### This project is a memory flash card game. Utilizing HTML, CSS and Javascript, I will be creating a college football team memory flash card game. When entering the project, you will start out on a landing page and will be given two options - a 12 card game, or a 16 card game. Once you decide on a game option, you will be taken to a game board. The cards will be shown, then flipped and shuffled. You will need to go through and match all the pairs in order to win the game. Once you have done so, the scoreboard will be updated and you will be given two options- to play again or to go back to the homepage and choose a different game size.
+#### This project is a memory flash card game. Utilizing HTML, CSS and Javascript, I will be creating a memory flash card game. When entering the project, you will start out on a landing page and will be given two options - a 12 card game, or a 16 card game. Once you decide on a game option, you will be taken to a game board. The cards will be shown, then flipped and shuffled. You will need to go through and match all the pairs in order to win the game. Once you have done so, the scoreboard will be updated and you will be given two options- to play again or to go back to the homepage and choose a different game size.
 
 ---
 

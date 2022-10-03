@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+body {
+    background: #033a56;
+}
+
+.game-title {
+    color: white;
+    text-align: center;
+    font-family: "Cinzel Decorative", sans-serif;
+    font-size: 70px;
+}
+
+.game-description {
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 70px 0 70px;
+    padding: 0 50px 0 50px;
+}
+
+.start-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  1fr 1fr;
+    place-items: center;
+
+}
+
+.hard-button, .easy-button {
+    width: 600px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    font-family: "Cinzel", sans-serif;
+    border: 2px dashed black;
+
+}
+
+footer {
+    color: white;
+    font-family: "Cinzel Decorative", sans-serif;
+    text-align: center;
+    padding: 40px;
+}
