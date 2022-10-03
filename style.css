@@ -54,3 +54,20 @@ footer {
 a {
     text-decoration: none;
 }
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: "Cinzel Decorative", sans-serif;
+    font-size: 40px;
+}
+
+h4 {
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 70px 0 70px;
+    padding: 0 50px 0 50px;
+}
