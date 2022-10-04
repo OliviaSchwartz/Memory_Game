@@ -15,6 +15,7 @@ body {
 
 .game-description {
     color: #ffeedf;
+    font-family: "Raleway", sans-serif;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -29,6 +30,13 @@ body {
     grid-template-rows:  1fr 1fr;
     place-items: center;
 
+}
+
+footer {
+    color: #ffeedf;
+    font-family: "Raleway", sans-serif;
+    font-size: 30px;
+    text-align:center;
 }
 
 .hard-button, .easy-button {
@@ -59,6 +67,7 @@ h1 {
 
 h4 {
     color: #ffeedf;
+    font-family: "Raleway", sans-serif;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -69,15 +78,10 @@ h4 {
 
 .game-play {
     display: grid;
-    grid-template-rows: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
-   width: 100%;
-   margin: 50px auto;
-    /* display: grid;
     grid-auto-rows: min-content;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    column-gap: 10px; */
+    column-gap: 10px;
 }
 
 
@@ -85,7 +89,7 @@ h4 {
     position: absolute;
     width: 150px;
     height: 150px;
-
+    opacity: .7;
 }
 
 .back {
@@ -93,6 +97,8 @@ h4 {
     margin-top: 0px;
     width: 150px;
     height: 150px;
+    /* transform: rotateY(180deg); */
+    /* transition: transform 0.8s; */
 }
 
 .playing-area {
@@ -102,17 +108,17 @@ h4 {
     column-gap: 10px;
     row-gap: 10px;
     text-align: center;
-
+    cursor: pointer;
 }
 
 .playing-area2{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    column-gap: 10px;
-    row-gap: 10px;
+    column-gap: 5px;
+    row-gap: 5px;
     text-align: center;
-
+    cursor: pointer;
 }
 
 
@@ -144,4 +150,20 @@ button {
     margin: 15px;
     background-color: #ffeedf;
     font-family: "Raleway", sans-serif;
+}
+
+.front.flip {
+    transform: .2s;
+}
+/*
+.card:active {
+       transform: scale(0.97);
+       transition: transform .2s;
+     }
+
+.back:active {
+    opacity: 1
+}
+.front:active {
+    opacity: 0
 }
