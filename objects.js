@@ -12,8 +12,6 @@ function flipCard() {
   this.classList.toggle('flip')
 }
 
-card.forEach((card) => card.addEventListener('click', flipCard))
-
 // // function shuffle() {
 // //   cards.forEach((card) => {
 // //     let ramdomPos = Math.floor(Math.random() * 12)
@@ -22,6 +20,6 @@ card.forEach((card) => card.addEventListener('click', flipCard))
 // // }
 // // shuffle()
 // //Event Handlers Here
-// document
-//   .querySelectorAll('.card')
-//   .forEach((card) => card.addEventListener('click', flipCard))
+document
+  .querySelectorAll('.front')
+  .forEach((card) => card.addEventListener('click', flipCard))

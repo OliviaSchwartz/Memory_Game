@@ -89,7 +89,7 @@ h4 {
     position: absolute;
     width: 150px;
     height: 150px;
-    opacity: .7;
+    opacity: 1;
 }
 
 .back {
@@ -97,8 +97,7 @@ h4 {
     margin-top: 0px;
     width: 150px;
     height: 150px;
-    /* transform: rotateY(180deg); */
-    /* transition: transform 0.8s; */
+
 }
 
 .playing-area {
@@ -153,17 +152,5 @@ button {
 }
 
 .front.flip {
-    transform: .2s;
-}
-/*
-.card:active {
-       transform: scale(0.97);
-       transition: transform .2s;
-     }
-
-.back:active {
-    opacity: 1
-}
-.front:active {
-    opacity: 0
+    opacity: 0;
 }
