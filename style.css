@@ -4,10 +4,6 @@ body {
     background: #033a56;
 
 }
-.game-play {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
 
 .game-title {
     color: #ffeedf;
@@ -25,11 +21,6 @@ body {
     align-items: center;
     margin: 0 70px 0 70px;
     padding: 0 50px 0 50px;
-}
-
-.game-play {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .start-buttons {
@@ -54,13 +45,6 @@ body {
 
 }
 
-footer {
-    color: #ffeedf;
-    font-family: "Raleway", sans-serif;
-    text-align: center;
-    padding: 40px;
-}
-
 a {
     text-decoration: none;
 }
@@ -83,6 +67,19 @@ h4 {
     padding: 0 50px 0 50px;
 }
 
+.game-play {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+   width: 100%;
+   margin: 50px auto;
+    /* display: grid;
+    grid-auto-rows: min-content;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 10px; */
+}
+
 
 .front {
     position: absolute;
@@ -101,32 +98,33 @@ h4 {
 .playing-area {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    text-align: center;
+
+}
+
+.playing-area2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     column-gap: 10px;
     row-gap: 10px;
     text-align: center;
-    margin: 50px;
-}
-
-.game-play {
-    height: 300px;
-    margin: 10px 50px 10px 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 10px;
-    text-align: center;
 
 }
 
-.scoreboard{
+
+.scoreboard {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-content: right;
     color: #ffeedf;
     font-family:"Raleway", sans-serif;
     font-size: 40px;
+    text-align: center;
 }
 .score{
     text-decoration: underline;
@@ -144,4 +142,6 @@ h4 {
 button {
     padding:10px;
     margin: 15px;
+    background-color: #ffeedf;
+    font-family: "Raleway", sans-serif;
 }
