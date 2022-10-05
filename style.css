@@ -153,3 +153,6 @@ button {
 .front.flip {
     opacity: 0;
 }
+.front.matched {
+    display:none;
+}
