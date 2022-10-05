@@ -10,20 +10,6 @@ const imgArray = document.querySelectorAll('.card')
 const randomArray = ['']
 
 const shuffle = () => {
-    card.forEach((card) => {
-      let shuffledCards = Math.floor(Math.random() * 16)
-      card.style.order = shuffledCards
-    })
-  }
-  shuffle()
-
-const showImage = () => {
-  card.forEach((card) => {
-    let flipCard = backOfCard[]((card.style.class = '.front.flip'))
-  })
-}
-
-const shuffle = () => {
   card.forEach((card) => {
     let shuffledCards = Math.floor(Math.random() * 16)
     card.style.order = shuffledCards
@@ -31,7 +17,15 @@ const shuffle = () => {
 }
 shuffle()
 
+function flipCard() {
+  this.classList.toggle('flip')
+}
 
+// const showImage = () => {
+//   card.forEach((card) => {
+//     let flipCard = backOfCard((card.style.class = '.front.flip'))
+//   })
+// }
 
 //Function For ScoreBoard
 
@@ -41,13 +35,17 @@ shuffle()
 
 //Fuction to remove matched cards
 
-//Function to Play Again
-
 //Function For Winning Message
 
+//Function to Play Again
+const playAgain = () => {
+  //   isGameActive = true
+  shuffle()
+}
 document
   .querySelectorAll('.front')
-  .forEach((card) => card.addEventListener('click', showImage))
+  .forEach((card) => card.addEventListener('click', flipCard))
 
-
-document.querySelectorAll(.)
+document
+  .querySelectorAll('.reset')
+  .forEach((reset) => reset.addEventListener('click', playAgain))
