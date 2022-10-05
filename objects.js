@@ -7,7 +7,8 @@ const frontOfCard = document.getElementsByClassName('front')
 const backOfCard = document.querySelectorAll('.back')
 const showCard = document.querySelectorAll('.front').classList
 const imgArray = document.querySelectorAll('.card')
-const randomArray = ['']
+// let gameWon = null
+
 
 const shuffle = () => {
   card.forEach((card) => {
@@ -20,6 +21,20 @@ shuffle()
 function flipCard() {
   this.classList.toggle('flip')
 }
+const gamePlay = () =>
+let gameWon= false;
+
+
+
+
+
+
+
+
+
+
+
+
 
 // const showImage = () => {
 //   card.forEach((card) => {
