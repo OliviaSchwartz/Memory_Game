@@ -1,25 +1,53 @@
 // //Global Variables Here
 const playingCards = document.querySelectorAll('.card')
 const resetButton = document.querySelector('.reset')
-// const images=
-let isGameActive = true
-let card = document.querySelectorAll('.card')
-let frontOfCard = document.getElementsByClassName('front')
-let backOfCard = document.querySelectorAll('.back')
-// var showCard = document.querySelectorAll('.front')
+const isGameActive = true
+const card = document.querySelectorAll('.card')
+const frontOfCard = document.getElementsByClassName('front')
+const backOfCard = document.querySelectorAll('.back')
+const showCard = document.querySelectorAll('.front').classList
+const imgArray = document.querySelectorAll('.card')
+const randomArray = ['']
 
-function flipCard() {
-  this.classList.toggle('flip')
+const shuffle = () => {
+    card.forEach((card) => {
+      let shuffledCards = Math.floor(Math.random() * 16)
+      card.style.order = shuffledCards
+    })
+  }
+  shuffle()
+
+const showImage = () => {
+  card.forEach((card) => {
+    let flipCard = backOfCard[]((card.style.class = '.front.flip'))
+  })
 }
 
-// // function shuffle() {
-// //   cards.forEach((card) => {
-// //     let ramdomPos = Math.floor(Math.random() * 12)
-// //     card.style.order = ramdomPos
-// //   })
-// // }
-// // shuffle()
-// //Event Handlers Here
+const shuffle = () => {
+  card.forEach((card) => {
+    let shuffledCards = Math.floor(Math.random() * 16)
+    card.style.order = shuffledCards
+  })
+}
+shuffle()
+
+
+
+//Function For ScoreBoard
+
+//Function For Matches
+
+//Function For Locked Board
+
+//Fuction to remove matched cards
+
+//Function to Play Again
+
+//Function For Winning Message
+
 document
   .querySelectorAll('.front')
-  .forEach((card) => card.addEventListener('click', flipCard))
+  .forEach((card) => card.addEventListener('click', showImage))
+
+
+document.querySelectorAll(.)
