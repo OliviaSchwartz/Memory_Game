@@ -1,14 +1,25 @@
-// //Global Variables Here
 const playingCards = document.querySelectorAll('.card')
 const resetButton = document.querySelector('.reset')
 const isGameActive = true
 const card = document.querySelectorAll('.card')
-const frontOfCard = document.getElementsByClassName('front')
+const gameChoice = document.querySelectorAll('img')
+const frontOfCard = document.querySelectorAll('.front')
 const backOfCard = document.querySelectorAll('.back')
-const showCard = document.querySelectorAll('.front').classList
 const imgArray = document.querySelectorAll('.card')
-// let gameWon = null
+const playingArea = document.querySelectorAll('.play-area')
+const cardDataValue = parseInt(card.getAttribute('data-value'))
 
+let clickedCards = []
+const matchCombinations = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+  [6, 7],
+  [8, 9],
+  [10, 11],
+  [12.13],
+  [14, 15]
+]
 
 const shuffle = () => {
   card.forEach((card) => {
@@ -18,49 +29,15 @@ const shuffle = () => {
 }
 shuffle()
 
-function flipCard() {
-  this.classList.toggle('flip')
+const flipCard = (event) => {
+  event.target.classList.toggle('flip')
 }
-const gamePlay = () =>
-let gameWon= false;
 
-
-
-
-
-
-
-
-
-
-
-
-
-// const showImage = () => {
-//   card.forEach((card) => {
-//     let flipCard = backOfCard((card.style.class = '.front.flip'))
-//   })
-// }
-
-//Function For ScoreBoard
-
-//Function For Matches
-
-//Function For Locked Board
-
-//Fuction to remove matched cards
-
-//Function For Winning Message
-
-//Function to Play Again
-const playAgain = () => {
-  //   isGameActive = true
-  shuffle()
+const cardMatch = (matchCombinations) => {
+  if (matchCombinations[0] === true) {
+  }
 }
+
 document
-  .querySelectorAll('.front')
+  .querySelectorAll('.card')
   .forEach((card) => card.addEventListener('click', flipCard))
-
-document
-  .querySelectorAll('.reset')
-  .forEach((reset) => reset.addEventListener('click', playAgain))
