@@ -3,6 +3,7 @@ const frontOfCard = document.querySelectorAll('.front')
 const backOfCard = document.querySelectorAll('.back')
 const playingArea = document.querySelectorAll('.play-area')
 const card = document.querySelectorAll('.card')
+const cardArray = document.querySelectorAll('.card')
 const cardOne = (document.getElementById('cardset-one').dataset.value = 0)
 const cardTwo = (document.getElementById('cardset-two').dataset.value = 0)
 const cardThree = (document.getElementById('cardset-three').dataset.value = 1)
@@ -30,7 +31,7 @@ const shuffle = () => {
 shuffle()
 
 const checkforWin = () => {
-  if (matched === 6) {
+  if (matched === cardArray.length / 2) {
     messages.innerText = 'Yay! You won! Want to play again?'
     resetButton.style.display = 'block'
     wins++
