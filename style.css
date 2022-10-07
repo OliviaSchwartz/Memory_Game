@@ -150,6 +150,14 @@ button {
     font-family: "Raleway", sans-serif;
 }
 
+h5 {
+    color: #ffeedf;
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+
 .front.flip {
     opacity: 0;
 }

@@ -1,13 +1,11 @@
 const resetButton = document.querySelector('.reset')
-// const card = document.querySelectorAll('.card')
 const frontOfCard = document.querySelectorAll('.front')
 const backOfCard = document.querySelectorAll('.back')
 const playingArea = document.querySelectorAll('.play-area')
-const firstClick = ''
-const secondClick = ''
+const firstClick = { currentChoice: null }
+const secondClick = { currentChoice: null }
+const gameWon = ''
 const card = document.querySelectorAll('.card')
-const counter = 1
-const wrong = false
 const cardOne = (document.getElementById('cardset-one').dataset.value = 0)
 const cardTwo = (document.getElementById('cardset-two').dataset.value = 0)
 const cardThree = (document.getElementById('cardset-three').dataset.value = 1)
@@ -20,20 +18,11 @@ const cardNine = (document.getElementById('cardset-nine').dataset.value = 4)
 const cardTen = (document.getElementById('cardset-ten').dataset.value = 4)
 const cardEleven = (document.getElementById('cardset-eleven').dataset.value = 5)
 const cardTwelve = (document.getElementById('cardset-twelve').dataset.value = 5)
-const cardOptions = [
-  cardOne,
-  cardTwo,
-  cardThree,
-  cardFour,
-  cardFive,
-  cardSix,
-  cardSeven,
-  cardEight,
-  cardNine,
-  cardTen,
-  cardEleven,
-  cardTwelve
-]
+const messages = document.querySelector('h5')
+let flippedCard = 0
+let firstCardNumber = ''
+let secondCardNumber = ''
+let numCardOpened = []
 const shuffle = () => {
   card.forEach((card) => {
     let shuffledCards = Math.floor(Math.random() * 16)
@@ -42,71 +31,79 @@ const shuffle = () => {
 }
 shuffle()
 
+const matchCards = () => {
+  if (firstCardNumber === secondCardNumber) {
+    console.log('Yes')
+  } else if (firstCardNumber != secondCardNumber) {
+    console.log('nope')
+  } else console.log('try again')
+}
+
+const compare = (clickedCard) => {
+  if (numCardOpened[0].dataset.value === numCardOpened[1].dataset.value) {
+    messages.innerText = 'Match'
+    numCardOpened[0].style.opacity = 0.5
+    numCardOpened[1].style.opacity = 0.5
+    numCardOpened.length = 0
+  } else if (numCardOpened[0].dataset.value != numCardOpened[1].dataset.value) {
+    setTimeout(function () {
+      numCardOpened[0].children[0].classList.remove('flip')
+      numCardOpened[1].children[0].classList.remove('flip')
+      numCardOpened.length = 0
+    }, 400)
+  }
+}
+
 const flipCard = (event) => {
   event.target.classList.toggle('flip')
+  let clickedCard = event.currentTarget
+  numCardOpened.push(clickedCard)
+  compare(clickedCard)
 }
 
-const selectFirstCard = () => {
-  firstClick.currentChoice = cardOptions[0]
-  //   compareCards()
-}
+// const compare = () => {
+//   if (numCardOpened[0].innerHTML === numCardOpend[1].innerHTML) {
+//     numCardOpened[1].children[0].parentNode.classList.add('open', 'backcolor')
+//     numcardOpened[0].children[0].parentNode.classList.add('open', 'backcolor')
+//     opened.push(this)
+//     numCardOpened.length = 0
+//   } else if (numCardOpened[0].innerHTML != numCardOpened[1].innerHTML) {
+//     numMistakes.push(this)
+//     setTimeout(function () {
+//       numCardOpened[0].children[0].classList.remove('open')
+//       numCardOpened[0].addEventListener('click', addToArray)
+//       numCardOpened[1].addEventListener('click', addToArray)
+//       numCardOpened[1].children[0].classList.remove('open')
+//       numCardOpend.length = 0
+//     }, 400)
+//   }
+// }
 
-document.querySelector('#cardset-one').addEventListener('click', flipCard)
 document
-  .querySelector('#cardset-one')
-  .addEventListener('click', selectFirstCard)
+  .querySelectorAll('.card')
+  .forEach((card) => card.addEventListener('click', flipCard))
 
-document.querySelector('#cardset-two').addEventListener('click', flipCard)
-document
-  .querySelector('#cardset-two')
-  .addEventListener('click', selectSecondCard)
+//   document.querySelector('.reset').addEventListener('click', resetGame)
 
-document.querySelector('#cardset-three').addEventListener('click', flipCard)
-document
-  .querySelector('#cardset-three')
-  .addEventListener('click', selectThirdCard)
+// const matchCards = () => {
+//   if (firstCardNumber === secondCardNumber) {
+//     console.log('Yes')
+//   } else if (firstCardNumber != secondCardNumber) {
+//     console.log('nope')
+//   } else console.log('try again')
+// }
 
-document.querySelector('#cardset-four').addEventListener('click', flipCard)
-document
-  .querySelector('#cardset-four')
-  .addEventListener('click', selectFourthCard)
-
-document.querySelector('#cardset-five').addEventListener('click', flipCard)
-document
-  .querySelector('#cardset-five')
-  .addEventListener('click', selectFifthCard)
-
-document.querySelector('#cardset-six').addEventListener('click', flipCard)
-document
-  .querySelector('#cardset-six')
-  .addEventListener('click', selectSixthCard)
-
-document.querySelector('#cardset-seven').addEventListener('click', flipCard)
-document
-  .querySelector('#cardset-seven')
-  .addEventListener('click', selectSeventhCard)
-
-document.querySelector('#cardset-eight').addEventListener('click', flipCard)
-document
-  .querySelector('#cardset-eight')
-  .addEventListener('click', selectEighthCard)
-
-document.querySelector('#cardset-nine').addEventListener('click', flipCard)
-document
-  .querySelector('#cardset-nine')
-  .addEventListener('click', selectNinthCard)
-
-document.querySelector('#cardset-ten').addEventListener('click', flipCard)
-document
-  .querySelector('#cardset-ten')
-  .addEventListener('click', selectTenthCard)
-
-document.querySelector('#cardset-eleven').addEventListener('click', flipCard)
-document
-  .querySelector('#cardset-eleven')
-  .addEventListener('click', selectEleventhCard)
-
-document.querySelector('#cardset-twelve').addEventListener('click', flipCard)
-document
-  .querySelector('#cardset-twelve')
-  .addEventListener('click', selectTwelfth)
+// const flipCard = (event) => {
+//   event.target.classList.toggle('flip')
+//   if (flippedCard < 1) {
+//     flippedCard++
+//     let clickedCard = event.currentTarget
+//     let firstCardNumber = clickedCard.dataset.value
+//     // console.log(firstCardNumber)
+//   } else if (flippedCard === 1) {
+//     let clickedCard = event.currentTarget
+//     let secondCardNumber = clickedCard.dataset.value
+//     console.log(secondCardNumber)
+//   }
+//   matchCards(firstCardNumber, secondCardNumber)
+// }
