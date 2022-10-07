@@ -18,6 +18,7 @@ const cardTwelve = (document.getElementById('cardset-twelve').dataset.value = 5)
 const messages = document.querySelector('h5')
 let numCardOpened = []
 let matched = 0
+let wins = 0
 
 const shuffle = () => {
   card.forEach((card) => {
@@ -35,6 +36,17 @@ const checkforWin = () => {
   } else {
     console.log('nope')
   }
+}
+
+const resetGame = () => {
+  messages.innerText = ''
+  resetButton.style.display = 'none'
+  document
+    .querySelectorAll('.front')
+    .forEach((frontOfCard) => (frontOfCard.style.opacity = 1))
+  document.querySelectorAll('.card').forEach((card) => (card.style.opacity = 1))
+  numCardOpened.length = 0
+  shuffle()
 }
 
 const compare = (clickedCard) => {
@@ -68,4 +80,4 @@ document
   .querySelectorAll('.card')
   .forEach((card) => card.addEventListener('click', flipCard))
 
-//   document.querySelector('.reset').addEventListener('click', resetGame)
+document.querySelector('.reset').addEventListener('click', resetGame)
