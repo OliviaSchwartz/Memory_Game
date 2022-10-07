@@ -37,7 +37,7 @@ const checkforWin = () => {
     wins++
     winsDisplay.innerText = wins
   } else {
-    console.log('nope')
+    return
   }
 }
 
@@ -46,7 +46,20 @@ const resetGame = () => {
   resetButton.style.display = 'none'
   numCardOpened.length = 0
   matched = 0
+  document
+    .querySelectorAll('.front')
+    .forEach((frontOfCard) => frontOfCard.classList.remove('flip'))
+  //   for (let i = 0; i < frontOfCard.length; i++) {
+  //     frontOfCard[i].classList.remove('flip')
+  //   }
 
+  document.querySelectorAll('.card').forEach((card) => (card.style.opacity = 1))
+  //   for (let i = 0; i < card.length; i++) {
+  //     card[i].style.opacity = 1
+  //   }
+  document
+    .querySelectorAll('.card')
+    .forEach((card) => card.addEventListener('click', flipCard))
   shuffle()
   compare()
 }
@@ -61,7 +74,7 @@ const compare = (clickedCard) => {
     numCardOpened.length = 0
     matched++
   } else if (numCardOpened[0].dataset.value != numCardOpened[1].dataset.value) {
-    setTimeout(function () {
+    setTimeout(() => {
       messages.innerText = ''
       numCardOpened[0].children[0].classList.remove('flip')
       numCardOpened[1].children[0].classList.remove('flip')
@@ -77,7 +90,6 @@ const flipCard = (event) => {
   numCardOpened.push(clickedCard)
   compare(clickedCard)
 }
-
 document
   .querySelectorAll('.card')
   .forEach((card) => card.addEventListener('click', flipCard))
