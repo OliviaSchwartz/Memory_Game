@@ -19,6 +19,7 @@ const messages = document.querySelector('h5')
 let numCardOpened = []
 let matched = 0
 let wins = 0
+let winsDisplay = document.querySelector('.score-display')
 
 const shuffle = () => {
   card.forEach((card) => {
@@ -33,6 +34,7 @@ const checkforWin = () => {
     messages.innerText = 'Yay! You won! Want to play again?'
     resetButton.style.display = 'block'
     wins++
+    winsDisplay.innerText = wins
   } else {
     console.log('nope')
   }
@@ -41,12 +43,11 @@ const checkforWin = () => {
 const resetGame = () => {
   messages.innerText = ''
   resetButton.style.display = 'none'
-  document
-    .querySelectorAll('.front')
-    .forEach((frontOfCard) => (frontOfCard.style.opacity = 1))
-  document.querySelectorAll('.card').forEach((card) => (card.style.opacity = 1))
   numCardOpened.length = 0
+  matched = 0
+
   shuffle()
+  compare()
 }
 
 const compare = (clickedCard) => {
