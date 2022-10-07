@@ -49,14 +49,9 @@ const resetGame = () => {
   document
     .querySelectorAll('.front')
     .forEach((frontOfCard) => frontOfCard.classList.remove('flip'))
-  //   for (let i = 0; i < frontOfCard.length; i++) {
-  //     frontOfCard[i].classList.remove('flip')
-  //   }
 
   document.querySelectorAll('.card').forEach((card) => (card.style.opacity = 1))
-  //   for (let i = 0; i < card.length; i++) {
-  //     card[i].style.opacity = 1
-  //   }
+
   document
     .querySelectorAll('.card')
     .forEach((card) => card.addEventListener('click', flipCard))
