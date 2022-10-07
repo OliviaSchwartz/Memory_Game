@@ -2,9 +2,6 @@ const resetButton = document.querySelector('.reset')
 const frontOfCard = document.querySelectorAll('.front')
 const backOfCard = document.querySelectorAll('.back')
 const playingArea = document.querySelectorAll('.play-area')
-const firstClick = { currentChoice: null }
-const secondClick = { currentChoice: null }
-const gameWon = ''
 const card = document.querySelectorAll('.card')
 const cardOne = (document.getElementById('cardset-one').dataset.value = 0)
 const cardTwo = (document.getElementById('cardset-two').dataset.value = 0)
@@ -19,10 +16,9 @@ const cardTen = (document.getElementById('cardset-ten').dataset.value = 4)
 const cardEleven = (document.getElementById('cardset-eleven').dataset.value = 5)
 const cardTwelve = (document.getElementById('cardset-twelve').dataset.value = 5)
 const messages = document.querySelector('h5')
-let flippedCard = 0
-let firstCardNumber = ''
-let secondCardNumber = ''
 let numCardOpened = []
+let matched = 0
+
 const shuffle = () => {
   card.forEach((card) => {
     let shuffledCards = Math.floor(Math.random() * 16)
@@ -31,12 +27,14 @@ const shuffle = () => {
 }
 shuffle()
 
-const matchCards = () => {
-  if (firstCardNumber === secondCardNumber) {
-    console.log('Yes')
-  } else if (firstCardNumber != secondCardNumber) {
+const checkforWin = () => {
+  if (matched === 6) {
+    messages.innerText = 'Yay! You won! Want to play again?'
+    resetButton.style.display = 'block'
+    wins++
+  } else {
     console.log('nope')
-  } else console.log('try again')
+  }
 }
 
 const compare = (clickedCard) => {
@@ -44,14 +42,19 @@ const compare = (clickedCard) => {
     messages.innerText = 'Match'
     numCardOpened[0].style.opacity = 0.5
     numCardOpened[1].style.opacity = 0.5
+    numCardOpened[0].removeEventListener('click', flipCard)
+    numCardOpened[1].removeEventListener('click', flipCard)
     numCardOpened.length = 0
+    matched++
   } else if (numCardOpened[0].dataset.value != numCardOpened[1].dataset.value) {
     setTimeout(function () {
+      messages.innerText = ''
       numCardOpened[0].children[0].classList.remove('flip')
       numCardOpened[1].children[0].classList.remove('flip')
       numCardOpened.length = 0
-    }, 400)
+    }, 600)
   }
+  checkforWin()
 }
 
 const flipCard = (event) => {
@@ -61,49 +64,8 @@ const flipCard = (event) => {
   compare(clickedCard)
 }
 
-// const compare = () => {
-//   if (numCardOpened[0].innerHTML === numCardOpend[1].innerHTML) {
-//     numCardOpened[1].children[0].parentNode.classList.add('open', 'backcolor')
-//     numcardOpened[0].children[0].parentNode.classList.add('open', 'backcolor')
-//     opened.push(this)
-//     numCardOpened.length = 0
-//   } else if (numCardOpened[0].innerHTML != numCardOpened[1].innerHTML) {
-//     numMistakes.push(this)
-//     setTimeout(function () {
-//       numCardOpened[0].children[0].classList.remove('open')
-//       numCardOpened[0].addEventListener('click', addToArray)
-//       numCardOpened[1].addEventListener('click', addToArray)
-//       numCardOpened[1].children[0].classList.remove('open')
-//       numCardOpend.length = 0
-//     }, 400)
-//   }
-// }
-
 document
   .querySelectorAll('.card')
   .forEach((card) => card.addEventListener('click', flipCard))
 
 //   document.querySelector('.reset').addEventListener('click', resetGame)
-
-// const matchCards = () => {
-//   if (firstCardNumber === secondCardNumber) {
-//     console.log('Yes')
-//   } else if (firstCardNumber != secondCardNumber) {
-//     console.log('nope')
-//   } else console.log('try again')
-// }
-
-// const flipCard = (event) => {
-//   event.target.classList.toggle('flip')
-//   if (flippedCard < 1) {
-//     flippedCard++
-//     let clickedCard = event.currentTarget
-//     let firstCardNumber = clickedCard.dataset.value
-//     // console.log(firstCardNumber)
-//   } else if (flippedCard === 1) {
-//     let clickedCard = event.currentTarget
-//     let secondCardNumber = clickedCard.dataset.value
-//     console.log(secondCardNumber)
-//   }
-//   matchCards(firstCardNumber, secondCardNumber)
-// }
