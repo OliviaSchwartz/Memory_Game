@@ -21,6 +21,7 @@
 - GitHub
 - VS Code
 - Surge
+  -[Deployed App](https://olivias-memory-game.surge.sh/index.html)
 - Trello
   - [Trello Board Here](https://trello.com/invite/b/JEU3GQq9/fb0ff0418770e21b5680bf5c6ad94c3b/olivia-schwartz-memory-game)
 
